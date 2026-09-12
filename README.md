@@ -5,6 +5,7 @@
 SpeakMate AI is an AI-powered English speaking practice platform designed to help users improve their speaking skills through interactive practice, instant AI feedback, progress tracking, and engaging challenges.
 
 🌐 **Live Website:** https://speak-mate-ai-blue.vercel.app
+![SpeakMate AI Homepage](Screenshot%202026-09-12%20232244.png)
 
 ---
 
