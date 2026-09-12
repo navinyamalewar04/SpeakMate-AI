@@ -1,0 +1,1263 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #f8f9ff;
+  color: #151525;
+  overflow-x: hidden;
+}
+
+button,
+a {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(139, 92, 246, 0.16),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(59, 130, 246, 0.12),
+      transparent 30%
+    ),
+    #f8f9ff;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  width: 90%;
+  max-width: 1200px;
+  height: 85px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: #6d4aff;
+  letter-spacing: -0.5px;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-text-btn {
+  border: none;
+  background: transparent;
+
+  color: #4b4b63;
+  font-size: 15px;
+  font-weight: 500;
+
+  transition: 0.2s ease;
+}
+
+.nav-text-btn:hover {
+  color: #6d4aff;
+}
+
+.login-btn {
+  padding: 10px 20px;
+
+  border: 1px solid #6d4aff;
+  border-radius: 10px;
+
+  background: transparent;
+  color: #6d4aff;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition: 0.2s ease;
+}
+
+.login-btn:hover {
+  background: #6d4aff;
+  color: #ffffff;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+  width: 90%;
+  max-width: 1200px;
+
+  min-height: calc(100vh - 85px);
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+
+  align-items: center;
+  gap: 60px;
+}
+
+.hero-text {
+  padding: 40px 0;
+}
+
+.badge {
+  display: inline-block;
+
+  margin-bottom: 24px;
+  padding: 9px 16px;
+
+  background: #ece8ff;
+  color: #6d4aff;
+
+  border-radius: 30px;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hero h1 {
+  font-size: clamp(48px, 6vw, 78px);
+  line-height: 1.05;
+
+  letter-spacing: -3px;
+  font-weight: 800;
+}
+
+.hero h1 span {
+  background: linear-gradient(
+    90deg,
+    #6d4aff,
+    #2f7fff
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+
+.hero-text > p {
+  max-width: 620px;
+
+  margin-top: 24px;
+
+  color: #66667c;
+
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* =========================
+   HERO BUTTONS
+========================= */
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+
+  margin-top: 32px;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 15px 26px;
+
+  border-radius: 12px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.primary-btn {
+  border: none;
+
+  background: linear-gradient(
+    135deg,
+    #6d4aff,
+    #4378ff
+  );
+
+  color: #ffffff;
+
+  box-shadow:
+    0 10px 30px
+    rgba(109, 74, 255, 0.25);
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 14px 35px
+    rgba(109, 74, 255, 0.32);
+}
+
+.secondary-btn {
+  border: 1px solid #deddee;
+
+  background: #ffffff;
+  color: #333348;
+}
+
+.secondary-btn:hover {
+  background: #f3f1ff;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   STATS
+========================= */
+
+.stats {
+  display: flex;
+  gap: 40px;
+
+  margin-top: 45px;
+}
+
+.stats div {
+  display: flex;
+  flex-direction: column;
+}
+
+.stats strong {
+  color: #25253a;
+
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.stats span {
+  margin-top: 4px;
+
+  color: #77778d;
+
+  font-size: 13px;
+}
+
+/* =========================
+   NEXA HERO AREA
+========================= */
+
+.nexa-card {
+  position: relative;
+
+  min-height: 500px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nexa-placeholder {
+  width: 390px;
+  height: 390px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #ebe9ff
+    );
+
+  border:
+    1px solid
+    rgba(109, 74, 255, 0.08);
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 30px 80px
+      rgba(99, 70, 200, 0.18),
+    inset 0 0 30px
+      rgba(255, 255, 255, 0.7);
+}
+
+.nexa-image {
+  width: 115%;
+  height: 115%;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(
+      0 20px 25px
+      rgba(80, 60, 180, 0.15)
+    );
+
+  transition:
+    transform 0.3s ease;
+}
+
+.nexa-image:hover {
+  transform:
+    translateY(-6px)
+    scale(1.02);
+}
+
+.speech-bubble {
+  position: absolute;
+
+  bottom: 48px;
+  left: 5px;
+
+  min-width: 240px;
+
+  padding: 18px 22px;
+
+  background:
+    rgba(255, 255, 255, 0.95);
+
+  border:
+    1px solid
+    rgba(109, 74, 255, 0.08);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 15px 40px
+    rgba(0, 0, 0, 0.09);
+
+  backdrop-filter: blur(10px);
+}
+
+.speech-bubble p {
+  margin-bottom: 5px;
+
+  color: #25253a;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.speech-bubble span {
+  color: #77778d;
+
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* =========================
+   COMMON SECTION HEADING
+========================= */
+
+.section-heading {
+  max-width: 700px;
+
+  margin: 0 auto 55px;
+
+  text-align: center;
+}
+
+.section-tag {
+  display: inline-block;
+
+  color: #6d4aff;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.section-heading h2 {
+  margin-top: 12px;
+
+  color: #19192c;
+
+  font-size:
+    clamp(34px, 4vw, 52px);
+
+  line-height: 1.12;
+
+  letter-spacing: -2px;
+}
+
+.section-heading p {
+  max-width: 620px;
+
+  margin: 18px auto 0;
+
+  color: #74748a;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* =========================
+   HOW IT WORKS
+========================= */
+
+.how-section {
+  width: 90%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 110px 0 120px;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 22px;
+}
+
+.step-card {
+  position: relative;
+
+  min-height: 285px;
+
+  padding: 30px;
+
+  background:
+    rgba(255, 255, 255, 0.82);
+
+  border:
+    1px solid #e9e7f2;
+
+  border-radius: 22px;
+
+  box-shadow:
+    0 14px 40px
+    rgba(35, 26, 72, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.step-card:hover {
+  transform:
+    translateY(-7px);
+
+  border-color:
+    rgba(109, 74, 255, 0.25);
+
+  box-shadow:
+    0 22px 55px
+    rgba(59, 43, 130, 0.11);
+}
+
+.featured-step {
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f4f0ff
+    );
+
+  border-color:
+    rgba(109, 74, 255, 0.24);
+}
+
+.step-number {
+  position: absolute;
+
+  top: 24px;
+  right: 25px;
+
+  color: #d5d0ee;
+
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.step-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eeeaff;
+
+  border-radius: 16px;
+
+  font-size: 27px;
+}
+
+.step-card h3 {
+  margin-top: 25px;
+
+  color: #222237;
+
+  font-size: 20px;
+}
+
+.step-card p {
+  margin-top: 12px;
+
+  color: #74748a;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* =========================
+   ABOUT NEXA
+========================= */
+
+.about-nexa-section {
+  width: 90%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 110px 0;
+
+  display: grid;
+  grid-template-columns:
+    0.9fr 1.1fr;
+
+  align-items: center;
+  gap: 80px;
+}
+
+.about-nexa-visual {
+  position: relative;
+
+  min-height: 550px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-nexa-glow {
+  position: absolute;
+
+  width: 390px;
+  height: 390px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(126, 89, 255, 0.22),
+      rgba(89, 133, 255, 0.08),
+      transparent 68%
+    );
+
+  filter: blur(3px);
+}
+
+.about-nexa-image {
+  position: relative;
+
+  width: min(470px, 100%);
+  max-height: 500px;
+
+  object-fit: contain;
+
+  z-index: 2;
+
+  filter:
+    drop-shadow(
+      0 30px 45px
+      rgba(65, 49, 130, 0.2)
+    );
+}
+
+.nexa-online-badge {
+  position: absolute;
+
+  left: 50%;
+  bottom: 20px;
+
+  transform:
+    translateX(-50%);
+
+  z-index: 3;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  white-space: nowrap;
+
+  padding: 11px 17px;
+
+  background:
+    rgba(255, 255, 255, 0.94);
+
+  border:
+    1px solid #e8e5f4;
+
+  border-radius: 999px;
+
+  color: #3d3d52;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  box-shadow:
+    0 12px 35px
+    rgba(43, 31, 85, 0.1);
+}
+
+.nexa-online-badge span {
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  box-shadow:
+    0 0 0 4px
+    rgba(34, 197, 94, 0.13);
+}
+
+.about-nexa-content h2 {
+  margin-top: 12px;
+
+  color: #19192c;
+
+  font-size:
+    clamp(38px, 4vw, 54px);
+
+  line-height: 1.1;
+
+  letter-spacing: -2px;
+}
+
+.about-description {
+  max-width: 610px;
+
+  margin-top: 22px;
+
+  color: #6d6d82;
+
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.nexa-features {
+  margin-top: 30px;
+
+  display: grid;
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: 15px;
+}
+
+.nexa-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+
+  padding: 17px;
+
+  background:
+    rgba(255, 255, 255, 0.72);
+
+  border:
+    1px solid #eceaf4;
+
+  border-radius: 16px;
+}
+
+.nexa-feature > span {
+  width: 39px;
+  height: 39px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #eeeaff;
+
+  border-radius: 11px;
+
+  font-size: 18px;
+}
+
+.nexa-feature h3 {
+  color: #29293e;
+
+  font-size: 14px;
+}
+
+.nexa-feature p {
+  margin-top: 5px;
+
+  color: #7a7a90;
+
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.about-start-btn {
+  margin-top: 26px;
+}
+
+/* =========================
+   HOME CTA
+========================= */
+
+.home-cta {
+  width: 90%;
+  max-width: 1200px;
+
+  margin: 30px auto 0;
+
+  padding: 75px 30px;
+
+  text-align: center;
+
+  color: white;
+
+  border-radius: 30px;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(255, 255, 255, 0.14),
+      transparent 25%
+    ),
+    linear-gradient(
+      135deg,
+      #26203e,
+      #4a2d8d,
+      #315fd2
+    );
+
+  box-shadow:
+    0 25px 70px
+    rgba(54, 43, 130, 0.2);
+}
+
+.home-cta .section-tag {
+  color: #c8baff;
+}
+
+.home-cta h2 {
+  max-width: 680px;
+
+  margin: 10px auto 0;
+
+  font-size:
+    clamp(34px, 4vw, 50px);
+
+  line-height: 1.13;
+
+  letter-spacing: -2px;
+}
+
+.home-cta p {
+  max-width: 590px;
+
+  margin: 18px auto 28px;
+
+  color: #dedbea;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.home-cta .primary-btn {
+  background: white;
+  color: #5e3de2;
+
+  box-shadow:
+    0 12px 35px
+    rgba(0, 0, 0, 0.14);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.home-footer {
+  width: 90%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 55px 0 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  color: #818195;
+}
+
+.footer-logo {
+  color: #6d4aff;
+
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.home-footer p {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.home-footer span {
+  font-size: 12px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .navbar {
+    width: 92%;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .nav-text-btn {
+    font-size: 13px;
+  }
+
+  .hero {
+    width: 92%;
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    text-align: center;
+
+    padding-top: 50px;
+  }
+
+  .hero-text > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .stats {
+    justify-content: center;
+  }
+
+  .nexa-card {
+    min-height: 420px;
+  }
+
+  .nexa-placeholder {
+    width: 310px;
+    height: 310px;
+  }
+
+  .speech-bubble {
+    left: 50%;
+    bottom: 25px;
+
+    transform:
+      translateX(-50%);
+  }
+
+  .how-section {
+    width: 92%;
+    padding: 90px 0;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .step-card {
+    min-height: auto;
+  }
+
+  .about-nexa-section {
+    width: 92%;
+
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    text-align: center;
+
+    padding: 80px 0;
+  }
+
+  .about-nexa-visual {
+    min-height: 430px;
+  }
+
+  .about-nexa-content {
+    max-width: 750px;
+
+    margin: 0 auto;
+  }
+
+  .about-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .nexa-feature {
+    text-align: left;
+  }
+
+  .home-cta {
+    width: 92%;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .navbar {
+    width: 92%;
+    height: 75px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .nav-links {
+    gap: 8px;
+  }
+
+  .nav-text-btn {
+    display: none;
+  }
+
+  .login-btn {
+    padding: 9px 15px;
+
+    font-size: 13px;
+  }
+
+  .hero {
+    min-height: auto;
+
+    padding:
+      35px 0 60px;
+
+    text-align: center;
+  }
+
+  .badge {
+    margin-bottom: 20px;
+
+    padding: 8px 13px;
+
+    font-size: 12px;
+  }
+
+  .hero h1 {
+    font-size: 46px;
+
+    line-height: 1.04;
+
+    letter-spacing: -2px;
+  }
+
+  .hero-text {
+    padding: 15px 0;
+  }
+
+  .hero-text > p {
+    margin-top: 19px;
+
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+
+    margin-top: 26px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+  }
+
+  .stats {
+    gap: 18px;
+
+    margin-top: 35px;
+
+    justify-content:
+      space-between;
+  }
+
+  .stats strong {
+    font-size: 18px;
+  }
+
+  .stats span {
+    font-size: 10px;
+  }
+
+  .nexa-card {
+    min-height: 350px;
+
+    margin-top: 5px;
+  }
+
+  .nexa-placeholder {
+    width: 255px;
+    height: 255px;
+  }
+
+  .nexa-image {
+    width: 112%;
+    height: 112%;
+  }
+
+  .speech-bubble {
+    width: 88%;
+    min-width: auto;
+
+    bottom: 6px;
+
+    padding: 15px 18px;
+  }
+
+  .speech-bubble p {
+    font-size: 14px;
+  }
+
+  .speech-bubble span {
+    font-size: 12px;
+  }
+
+  .how-section {
+    padding: 75px 0;
+  }
+
+  .section-heading {
+    margin-bottom: 35px;
+  }
+
+  .section-heading h2 {
+    font-size: 34px;
+
+    letter-spacing: -1.5px;
+  }
+
+  .section-heading p {
+    font-size: 14px;
+  }
+
+  .step-card {
+    padding: 24px;
+
+    border-radius: 18px;
+  }
+
+  .about-nexa-section {
+    padding: 70px 0;
+  }
+
+  .about-nexa-visual {
+    min-height: 340px;
+  }
+
+  .about-nexa-glow {
+    width: 280px;
+    height: 280px;
+  }
+
+  .about-nexa-image {
+    width: 320px;
+    max-width: 100%;
+  }
+
+  .nexa-online-badge {
+    bottom: 4px;
+  }
+
+  .about-nexa-content h2 {
+    font-size: 36px;
+
+    letter-spacing: -1.5px;
+  }
+
+  .about-description {
+    font-size: 14px;
+  }
+
+  .nexa-features {
+    grid-template-columns: 1fr;
+
+    gap: 11px;
+  }
+
+  .about-start-btn {
+    width: 100%;
+  }
+
+  .home-cta {
+    padding:
+      55px 22px;
+
+    border-radius: 22px;
+  }
+
+  .home-cta h2 {
+    font-size: 34px;
+
+    letter-spacing: -1.4px;
+  }
+
+  .home-footer {
+    flex-direction: column;
+
+    text-align: center;
+
+    padding:
+      42px 0 30px;
+  }
+}
+
+/* =========================
+   EXTRA SMALL MOBILE
+========================= */
+
+@media (max-width: 390px) {
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .stats {
+    gap: 8px;
+  }
+
+  .stats span {
+    font-size: 9px;
+  }
+
+  .nexa-placeholder {
+    width: 235px;
+    height: 235px;
+  }
+
+  .section-heading h2,
+  .about-nexa-content h2,
+  .home-cta h2 {
+    font-size: 31px;
+  }
+}
+
+/* =========================
+   FINAL MOBILE SECTION FIX
+========================= */
+
+@media (max-width: 600px) {
+  .how-section .section-heading {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    text-align: center;
+    margin: 0 auto 35px;
+  }
+
+  .how-section .section-heading .section-tag {
+    display: block;
+    width: 100%;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+
+  .how-section .section-heading h2 {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    font-size: 34px;
+    line-height: 1.15;
+    letter-spacing: -1.3px;
+    text-align: center;
+  }
+
+  .how-section .section-heading h2 br {
+    display: none;
+  }
+
+  .how-section .section-heading p {
+    display: block;
+    width: 100%;
+    max-width: 330px;
+    margin: 16px auto 0;
+    font-size: 14px;
+    line-height: 1.65;
+    text-align: center;
+  }
+
+  .how-section .steps-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .how-section .step-card {
+    width: 100%;
+    min-width: 0;
+    text-align: left;
+  }
+}

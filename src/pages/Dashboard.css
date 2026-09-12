@@ -1,0 +1,985 @@
+.dashboard-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 85% 12%, #eee8ff 0, transparent 27%),
+    radial-gradient(circle at 10% 70%, #edf2ff 0, transparent 25%),
+    linear-gradient(135deg, #faf9ff, #f4f5ff);
+  font-family: "Inter", sans-serif;
+  color: #19172e;
+}
+
+/* =========================
+   TOP NAVBAR
+========================= */
+
+.product-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+
+  height: 76px;
+  padding: 0 6%;
+
+  display: flex;
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(18px);
+
+  border-bottom: 1px solid rgba(224, 219, 241, 0.8);
+}
+
+.product-logo {
+  color: #6543e8;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.7px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.product-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-left: 60px;
+}
+
+.product-nav-links button {
+  padding: 10px 15px;
+
+  border: none;
+  border-radius: 11px;
+
+  background: transparent;
+  color: #747181;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.product-nav-links button:hover {
+  color: #6241dc;
+  background: #f5f2ff;
+}
+
+.product-nav-links .nav-active {
+  color: #6040dc;
+  background: #f0ebff;
+}
+
+.product-nav-actions {
+  margin-left: auto;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.level-badge {
+  padding: 9px 13px;
+
+  border: 1px solid #e1dcf2;
+  border-radius: 20px;
+
+  background: #faf9ff;
+  color: #625b73;
+
+  font-size: 12px;
+  font-weight: 650;
+
+  cursor: pointer;
+}
+
+.level-badge:hover {
+  border-color: #bfb0ff;
+  color: #6543df;
+}
+
+.profile-circle {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: linear-gradient(135deg, #6742f7, #8c64ff);
+
+  color: white;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.navbar-logout {
+  padding: 9px 12px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: transparent;
+  color: #85818f;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.navbar-logout:hover {
+  color: #d44f68;
+  background: #fff4f6;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.product-dashboard {
+  width: min(1180px, 90%);
+  margin: 0 auto;
+
+  padding: 40px 0 70px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.coach-hero {
+  position: relative;
+
+  min-height: 385px;
+  padding: 52px 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+
+  overflow: hidden;
+
+  border: 1px solid #e5ddff;
+  border-radius: 32px;
+
+  background:
+    radial-gradient(circle at 82% 45%, rgba(154, 124, 255, 0.25), transparent 29%),
+    linear-gradient(135deg, #ffffff 0%, #faf8ff 55%, #f2edff 100%);
+
+  box-shadow:
+    0 26px 65px rgba(77, 57, 145, 0.11);
+}
+
+.coach-content {
+  position: relative;
+  z-index: 4;
+
+  max-width: 610px;
+}
+
+.coach-label {
+  display: inline-block;
+
+  margin-bottom: 15px;
+  padding: 7px 12px;
+
+  border-radius: 20px;
+
+  background: #eee9ff;
+  color: #6747df;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+.coach-content h1 {
+  margin: 0 0 7px;
+
+  color: #18152d;
+
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.coach-content h2 {
+  max-width: 600px;
+  margin: 0;
+
+  color: #17142d;
+
+  font-size: 43px;
+  line-height: 1.12;
+  letter-spacing: -1.6px;
+}
+
+.coach-content h2 span {
+  color: #6947e7;
+}
+
+.coach-content > p {
+  max-width: 560px;
+
+  margin: 18px 0 25px;
+
+  color: #777483;
+
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.coach-actions {
+  display: flex;
+  gap: 11px;
+}
+
+.continue-practice-btn,
+.choose-topic-btn {
+  min-height: 48px;
+  padding: 0 20px;
+
+  border-radius: 14px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: 0.22s ease;
+}
+
+.continue-practice-btn {
+  border: none;
+
+  background: linear-gradient(135deg, #623dff, #8458ff);
+  color: white;
+
+  box-shadow: 0 11px 25px rgba(100, 62, 255, 0.24);
+}
+
+.continue-practice-btn span {
+  margin-left: 8px;
+}
+
+.continue-practice-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 15px 30px rgba(100, 62, 255, 0.3);
+}
+
+.choose-topic-btn {
+  border: 1.5px solid #d9d0fa;
+
+  background: rgba(255, 255, 255, 0.85);
+  color: #6343db;
+}
+
+.choose-topic-btn:hover {
+  transform: translateY(-2px);
+  background: white;
+}
+
+/* =========================
+   NEXA HERO
+========================= */
+
+.coach-nexa {
+  position: relative;
+
+  width: 330px;
+  min-width: 330px;
+  height: 300px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.nexa-glow {
+  position: absolute;
+  top: 35px;
+  left: 50%;
+
+  width: 245px;
+  height: 245px;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background: rgba(138, 102, 255, 0.16);
+
+  filter: blur(20px);
+}
+
+.coach-nexa-image {
+  position: relative;
+  z-index: 2;
+
+  width: 275px;
+  height: auto;
+
+  object-fit: contain;
+
+  filter: drop-shadow(
+    0 18px 28px rgba(86, 60, 165, 0.18)
+  );
+}
+
+.coach-speech {
+  position: absolute;
+  z-index: 5;
+
+  right: -5px;
+  bottom: 5px;
+
+  width: 245px;
+  padding: 14px 16px;
+
+  border: 1px solid #e5dff4;
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  box-shadow: 0 12px 28px rgba(70, 53, 130, 0.11);
+}
+
+.coach-speech strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #6040da;
+
+  font-size: 13px;
+}
+
+.coach-speech p {
+  margin: 0;
+
+  color: #73707e;
+
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* =========================
+   SECTION HEADINGS
+========================= */
+
+.today-section,
+.practice-modes-section {
+  margin-top: 42px;
+}
+
+.section-heading {
+  margin-bottom: 17px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.section-heading > div > span {
+  color: #7457df;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.section-heading h2 {
+  margin: 5px 0 0;
+
+  color: #211d39;
+
+  font-size: 25px;
+  letter-spacing: -0.6px;
+}
+
+.section-heading > button {
+  padding: 8px;
+
+  border: none;
+
+  background: transparent;
+  color: #6747df;
+
+  font-size: 13px;
+  font-weight: 650;
+
+  cursor: pointer;
+}
+
+/* =========================
+   TODAY
+========================= */
+
+.today-grid {
+  display: grid;
+  grid-template-columns: 2.1fr 1fr 1fr 1fr;
+
+  gap: 13px;
+}
+
+.today-main-card {
+  min-height: 145px;
+  padding: 22px;
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  border: 1px solid #ded5ff;
+  border-radius: 20px;
+
+  background: linear-gradient(145deg, #f8f5ff, #ffffff);
+
+  box-shadow: 0 9px 25px rgba(66, 51, 120, 0.05);
+}
+
+.today-icon {
+  width: 50px;
+  height: 50px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+
+  background: #ece6ff;
+
+  font-size: 23px;
+}
+
+.today-card-content {
+  min-width: 0;
+}
+
+.small-title {
+  color: #8a83a0;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
+
+.today-card-content h3 {
+  margin: 5px 0 4px;
+
+  overflow: hidden;
+
+  color: #26213e;
+
+  font-size: 17px;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.today-card-content p {
+  margin: 0;
+
+  color: #8b8794;
+
+  font-size: 12px;
+}
+
+.today-main-card > button {
+  margin-left: auto;
+  padding: 10px 14px;
+
+  flex-shrink: 0;
+
+  border: none;
+  border-radius: 11px;
+
+  background: #6744e7;
+  color: white;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.mini-progress-card {
+  min-height: 145px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border: 1px solid #e8e5ef;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  box-shadow: 0 9px 24px rgba(60, 48, 110, 0.045);
+}
+
+.mini-icon {
+  font-size: 21px;
+}
+
+.mini-progress-card strong {
+  display: block;
+
+  color: #6040dc;
+
+  font-size: 28px;
+  line-height: 1;
+}
+
+.mini-progress-card div span {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #8d8996;
+
+  font-size: 11px;
+}
+
+/* =========================
+   PRACTICE MODES
+========================= */
+
+.practice-modes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 14px;
+}
+
+.mode-card {
+  position: relative;
+
+  min-height: 235px;
+  padding: 22px;
+
+  display: block;
+
+  border: 1px solid #e8e5ef;
+  border-radius: 21px;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  color: inherit;
+  text-align: left;
+
+  box-shadow: 0 9px 25px rgba(60, 48, 110, 0.045);
+}
+
+button.mode-card {
+  cursor: pointer;
+
+  transition: 0.22s ease;
+}
+
+button.mode-card:hover {
+  transform: translateY(-4px);
+
+  border-color: #cfc2ff;
+
+  box-shadow: 0 16px 32px rgba(74, 55, 140, 0.1);
+}
+
+.active-mode {
+  background:
+    radial-gradient(circle at 85% 10%, rgba(135, 95, 255, 0.12), transparent 32%),
+    linear-gradient(145deg, #f8f5ff, #ffffff);
+
+  border-color: #d9ceff;
+}
+
+.mode-icon {
+  width: 47px;
+  height: 47px;
+
+  margin-bottom: 17px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  background: #eee9ff;
+
+  font-size: 22px;
+}
+
+.mode-status,
+.coming-label {
+  display: inline-block;
+
+  margin-bottom: 10px;
+  padding: 4px 7px;
+
+  border-radius: 8px;
+
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+}
+
+.mode-status {
+  background: #e8fff2;
+  color: #26965d;
+}
+
+.coming-label {
+  background: #f2eff9;
+  color: #928aa6;
+}
+
+.mode-card h3 {
+  margin: 0;
+
+  color: #28233f;
+
+  font-size: 17px;
+}
+
+.mode-card p {
+  margin: 9px 0 0;
+
+  color: #898592;
+
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.mode-link {
+  position: absolute;
+  left: 22px;
+  bottom: 20px;
+
+  color: #6543df;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* =========================
+   NEXA TIP
+========================= */
+
+.nexa-coaching-card {
+  margin-top: 35px;
+  padding: 23px 26px;
+
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  border: 1px solid #ded5ff;
+  border-radius: 21px;
+
+  background:
+    linear-gradient(135deg, #f7f3ff, #fbfaff);
+
+  box-shadow: 0 10px 27px rgba(70, 53, 130, 0.06);
+}
+
+.coaching-icon {
+  width: 55px;
+  height: 55px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  background: white;
+
+  font-size: 27px;
+
+  box-shadow: 0 6px 17px rgba(65, 50, 120, 0.07);
+}
+
+.coaching-content {
+  flex: 1;
+}
+
+.coaching-content > span {
+  color: #7455df;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.coaching-content h3 {
+  margin: 4px 0;
+
+  color: #27223e;
+
+  font-size: 16px;
+}
+
+.coaching-content p {
+  margin: 0;
+
+  color: #7c7887;
+
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.nexa-coaching-card > button {
+  flex-shrink: 0;
+
+  padding: 11px 16px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #6744e7;
+  color: white;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+/* =========================
+   LOADING
+========================= */
+
+.dashboard-loading {
+  min-height: calc(100vh - 76px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: #706c7d;
+}
+
+.loading-nexa {
+  width: 180px;
+  height: auto;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+  .product-nav-links {
+    margin-left: 30px;
+  }
+
+  .coach-hero {
+    padding: 42px 38px;
+  }
+
+  .coach-content h2 {
+    font-size: 37px;
+  }
+
+  .coach-nexa {
+    width: 280px;
+    min-width: 280px;
+  }
+
+  .today-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .today-main-card {
+    grid-column: 1 / -1;
+  }
+
+  .practice-modes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 760px) {
+  .product-navbar {
+    height: 66px;
+    padding: 0 18px;
+  }
+
+  .product-logo {
+    font-size: 19px;
+  }
+
+  .product-nav-links {
+    display: none;
+  }
+
+  .level-badge {
+    display: none;
+  }
+
+  .navbar-logout {
+    font-size: 12px;
+  }
+
+  .product-dashboard {
+    width: calc(100% - 28px);
+    padding-top: 22px;
+  }
+
+  .coach-hero {
+    min-height: auto;
+    padding: 30px 22px;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    border-radius: 24px;
+  }
+
+  .coach-content h1 {
+    font-size: 20px;
+  }
+
+  .coach-content h2 {
+    font-size: 32px;
+  }
+
+  .coach-content > p {
+    font-size: 14px;
+  }
+
+  .coach-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .continue-practice-btn,
+  .choose-topic-btn {
+    width: 100%;
+  }
+
+  .coach-nexa {
+    width: 100%;
+    min-width: 0;
+    height: 285px;
+  }
+
+  .coach-nexa-image {
+    width: 235px;
+  }
+
+  .coach-speech {
+    right: 50%;
+    transform: translateX(50%);
+
+    width: 230px;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+  }
+
+  .section-heading h2 {
+    font-size: 22px;
+  }
+
+  .today-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .today-main-card {
+    grid-column: auto;
+  }
+
+  .mini-progress-card {
+    min-height: 110px;
+  }
+
+  .practice-modes {
+    grid-template-columns: 1fr;
+  }
+
+  .mode-card {
+    min-height: 215px;
+  }
+
+  .nexa-coaching-card {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .nexa-coaching-card > button {
+    width: 100%;
+  }
+}
+
+/* =========================
+   FINAL MOBILE MODE CARD FIX
+========================= */
+
+@media (max-width: 760px) {
+  .practice-modes {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .mode-card {
+    min-height: 0;
+    height: auto;
+    padding: 26px 26px 24px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .mode-icon {
+    margin-bottom: 18px;
+  }
+
+  .mode-card h3 {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  .mode-card p {
+    width: 100%;
+    margin: 10px 0 0;
+
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .mode-link {
+    position: static;
+
+    display: block;
+
+    margin-top: 18px;
+
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .mode-status,
+  .coming-label {
+    margin-bottom: 11px;
+  }
+}
