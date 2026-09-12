@@ -12,6 +12,7 @@ function Login() {
 
   const navigate = useNavigate();
 
+  // Email + Password Login
   const handleLogin = async () => {
     if (!email.trim() || !password.trim()) {
       alert("Please enter email and password.");
@@ -46,6 +47,29 @@ function Login() {
       );
     } finally {
       setLoading(false);
+    }
+  };
+
+  // Google Login
+  const handleGoogleLogin = async () => {
+    try {
+      const { error } = await supabase.auth.signInWithOAuth({
+        provider: "google",
+        options: {
+          redirectTo: `${window.location.origin}/dashboard`,
+        },
+      });
+
+      if (error) {
+        console.error("Google login error:", error);
+        alert(error.message);
+      }
+    } catch (error) {
+      console.error("Google login error:", error);
+
+      alert(
+        "Something went wrong with Google login. Please try again."
+      );
     }
   };
 
@@ -96,6 +120,18 @@ function Login() {
           {loading
             ? "Logging in..."
             : "Login"}
+        </button>
+
+        <div className="auth-divider">
+          <span>OR</span>
+        </div>
+
+        <button
+          className="google-login-btn"
+          onClick={handleGoogleLogin}
+          disabled={loading}
+        >
+          Continue with Google
         </button>
 
         <p className="auth-switch">

@@ -17,6 +17,7 @@ import Progress from "./pages/Progress";
 import Dashboard from "./pages/Dashboard";
 import MaturityChallenge from "./pages/MaturityChallenge";
 import MaturityFeedback from "./pages/MaturityFeedback";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 function Home() {
   const navigate = useNavigate();
@@ -449,6 +450,11 @@ function App() {
       <Route
         path="/maturity-feedback"
         element={<MaturityFeedback />}
+      />
+
+      <Route
+        path="/privacy-policy"
+        element={<PrivacyPolicy />}
       />
     </Routes>
   );
