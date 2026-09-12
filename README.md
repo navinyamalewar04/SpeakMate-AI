@@ -1,16 +1,84 @@
-# React + Vite
+# 🐰 SpeakMate AI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Speak English. Build Confidence.**
 
-Currently, two official plugins are available:
+SpeakMate AI is an AI-powered English speaking practice platform designed to help users improve their speaking skills through interactive practice, instant AI feedback, progress tracking, and engaging challenges.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+🌐 **Live Website:** https://speak-mate-ai-blue.vercel.app
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+- 🎙️ **English Speaking Practice** — Practice speaking on different topics and challenges.
+- 🤖 **AI-Powered Feedback** — Get feedback on grammar, vocabulary, fluency, and clarity.
+- 📊 **Performance Scores** — Receive individual scores to understand your speaking performance.
+- 💡 **Nexa's Tips** — Get personalized suggestions from Nexa to improve your English.
+- 📚 **Words to Learn** — Discover useful vocabulary after practice sessions.
+- 🎯 **Multiple Topics & Levels** — Choose your English level and practice topics that interest you.
+- 🧠 **Maturity Challenge** — Answer real-life scenarios and receive AI-based feedback on your reasoning.
+- 📈 **Progress Tracking** — Track previous practice sessions and improvement over time.
+- 🔐 **User Authentication** — Secure account signup and login.
+- 📱 **Responsive Design** — Works across desktop and mobile devices.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🐰 Meet Nexa
+
+**Nexa** is the AI speaking companion inside SpeakMate AI.
+
+Nexa guides users through speaking activities, analyzes their responses, provides useful feedback, and helps make English practice more interactive and engaging.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React + Vite
+- **Language:** JavaScript
+- **Backend & Database:** Supabase
+- **Authentication:** Supabase Auth
+- **AI Integration:** AI-powered speech analysis and feedback
+- **Deployment:** Vercel
+- **Version Control:** Git & GitHub
+
+---
+
+## 🚀 How It Works
+
+1. Create an account or log in.
+2. Select your English proficiency level.
+3. Choose a speaking topic or challenge.
+4. Speak your response.
+5. Receive instant AI-powered feedback and scores.
+6. Review Nexa's suggestions.
+7. Track your progress over time.
+
+---
+
+## 🎯 Project Goal
+
+SpeakMate AI was built with a simple goal:
+
+> Make English speaking practice more accessible, interactive, and confidence-building.
+
+Instead of only learning English through theory, users can actively practice speaking and receive feedback that helps them improve.
+
+---
+
+## 🔗 Live Demo
+
+Try SpeakMate AI here:
+
+**https://speak-mate-ai-blue.vercel.app**
+
+---
+
+## 👨‍💻 Developer
+
+**Navinya Malewar**
+
+AI Engineering Student | Web Development | Python | Building Projects & Exploring New Technologies
+
+---
+
+⭐ If you find SpeakMate AI useful, consider starring the repository!
