@@ -48,7 +48,6 @@ function Signup() {
 
       if (data?.session) {
         alert("Account created successfully! 🎉");
-
         navigate("/level");
         return;
       }
@@ -66,6 +65,28 @@ function Signup() {
       );
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleGoogleSignup = async () => {
+    try {
+      const { error } = await supabase.auth.signInWithOAuth({
+        provider: "google",
+        options: {
+          redirectTo: `${window.location.origin}/dashboard`,
+        },
+      });
+
+      if (error) {
+        console.error("Google signup error:", error);
+        alert(error.message);
+      }
+    } catch (error) {
+      console.error("Google signup error:", error);
+
+      alert(
+        "Something went wrong with Google sign in. Please try again."
+      );
     }
   };
 
@@ -124,6 +145,19 @@ function Signup() {
           {loading
             ? "Creating Account..."
             : "Create Account"}
+        </button>
+
+        <div className="auth-divider">
+          <span>OR</span>
+        </div>
+
+        <button
+          type="button"
+          className="google-login-btn"
+          onClick={handleGoogleSignup}
+          disabled={loading}
+        >
+          Continue with Google
         </button>
 
         <p className="auth-switch">
