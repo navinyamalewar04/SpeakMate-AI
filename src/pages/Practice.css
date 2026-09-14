@@ -1,27 +1,53 @@
+/* =========================================================
+   SPEAKMATE AI — PRACTICE PAGE
+   NEXA SPEAK LAB THEME
+========================================================= */
+
 .practice-page {
   min-height: 100vh;
-  padding: 40px 20px 60px;
+
+  padding: 42px 20px 70px;
 
   display: flex;
   justify-content: center;
   align-items: flex-start;
 
   background:
-    radial-gradient(circle at 18% 18%, #eee8ff 0, transparent 30%),
-    radial-gradient(circle at 82% 82%, #e9f0ff 0, transparent 30%),
-    linear-gradient(135deg, #f8f7ff, #f3f5ff);
+    radial-gradient(
+      circle at 12% 18%,
+      rgba(255, 132, 75, 0.09),
+      transparent 26%
+    ),
+    radial-gradient(
+      circle at 88% 12%,
+      rgba(25, 103, 255, 0.08),
+      transparent 28%
+    ),
+    #f7f2e8;
 
-  font-family: "Inter", sans-serif;
+  font-family: "DM Sans", "Inter", sans-serif;
+
+  color: #101b34;
 }
+
+
+/* =========================================================
+   MAIN WRAPPER
+========================================================= */
 
 .practice-wrapper {
   position: relative;
 
   width: 100%;
-  max-width: 760px;
+  max-width: 900px;
 
-  padding-top: 170px;
+  padding-top: 190px;
 }
+
+
+/* =========================================================
+   NEXA AREA
+========================================================= */
 
 .practice-nexa-area {
   position: absolute;
@@ -29,306 +55,771 @@
   top: 0;
   left: 50%;
 
-  transform: translateX(-50%);
-
   width: 100%;
-  height: 225px;
+  height: 230px;
+
+  transform: translateX(-50%);
 
   display: flex;
   justify-content: center;
   align-items: flex-start;
 
-  overflow: hidden;
+  overflow: visible;
 
-  z-index: 1;
+  z-index: 4;
 }
+
+
+/* circle behind Nexa */
+
+.practice-nexa-area::before {
+  content: "";
+
+  position: absolute;
+
+  top: 23px;
+  left: 50%;
+
+  width: 210px;
+  height: 210px;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffd6b4 0%,
+      #ffe6cc 55%,
+      #e5ecff 100%
+    );
+
+  z-index: 0;
+}
+
+
+/* soft outer glow */
+
+.practice-nexa-area::after {
+  content: "";
+
+  position: absolute;
+
+  top: 42px;
+  left: 50%;
+
+  width: 280px;
+  height: 180px;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(25, 103, 255, 0.12),
+      transparent 70%
+    );
+
+  filter: blur(12px);
+
+  z-index: 0;
+}
+
 
 .practice-nexa {
-  width: 255px;
-  height: auto;
+  position: relative;
+
+  z-index: 3;
+
+  width: 250px;
+  height: 220px;
 
   object-fit: contain;
+  object-position: center bottom;
 
-  filter: drop-shadow(
-    0 14px 24px rgba(91, 64, 170, 0.18)
-  );
+  filter:
+    drop-shadow(
+      0 18px 22px
+      rgba(16, 27, 52, 0.16)
+    );
 }
+
+
+/* =========================================================
+   MAIN PRACTICE CARD
+========================================================= */
 
 .practice-card {
   position: relative;
-  z-index: 3;
 
-  background: rgba(255, 255, 255, 0.97);
+  z-index: 5;
 
-  border-radius: 30px;
+  padding: 58px 58px 42px;
 
-  padding: 52px 54px 40px;
+  border: 2px solid #101b34;
+
+  border-radius: 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fffaf1 0%,
+      #fffdf8 100%
+    );
 
   box-shadow:
-    0 28px 70px rgba(75, 60, 140, 0.13),
-    0 8px 20px rgba(75, 60, 140, 0.05);
+    8px 8px 0 #101b34;
 }
+
+
+/* small orange decoration */
+
+.practice-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 25px;
+  right: 28px;
+
+  width: 12px;
+  height: 12px;
+
+  border-radius: 50%;
+
+  background: #ff844b;
+
+  box-shadow:
+    21px 0 0 #1967ff,
+    42px 0 0 #101b34;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.practice-top {
+  text-align: center;
+}
+
 
 .practice-top h1 {
   margin: 0;
 
-  font-size: 36px;
+  color: #101b34;
 
-  color: #16152c;
+  font-family: "Manrope", sans-serif;
 
-  letter-spacing: -1px;
+  font-size: 38px;
+  font-weight: 800;
+
+  letter-spacing: -1.5px;
 }
+
 
 .practice-top p {
-  margin: 10px 0 0;
+  max-width: 590px;
 
-  color: #727486;
+  margin: 11px auto 0;
 
-  font-size: 16px;
+  color: #697184;
 
-  line-height: 1.6;
+  font-size: 15px;
+
+  line-height: 1.7;
 }
+
+
+/* =========================================================
+   META PILLS
+========================================================= */
 
 .practice-meta {
   display: flex;
-  gap: 10px;
+  justify-content: center;
+  align-items: center;
+
+  gap: 9px;
+
   flex-wrap: wrap;
 
-  margin: 22px 0;
+  margin: 24px 0 26px;
 }
+
 
 .practice-pill {
   padding: 8px 13px;
 
-  border-radius: 20px;
+  border: 1px solid rgba(16, 27, 52, 0.15);
 
-  background: #f1edff;
+  border-radius: 999px;
 
-  color: #5f45d8;
+  background: #fff5e9;
 
-  font-size: 14px;
-  font-weight: 600;
+  color: #4f596d;
+
+  font-size: 12px;
+  font-weight: 700;
 }
+
+
+.practice-pill:nth-child(1) {
+  background: #e8efff;
+  color: #1967ff;
+}
+
+
+.practice-pill:nth-child(2) {
+  background: #ffdfc7;
+  color: #8a4d28;
+}
+
+
+/* =========================================================
+   CHALLENGE BOX
+========================================================= */
 
 .challenge-box {
-  padding: 20px;
+  position: relative;
 
-  border-radius: 18px;
+  margin-bottom: 22px;
 
-  background: linear-gradient(
-    135deg,
-    #f7f4ff,
-    #fbfaff
-  );
+  padding: 25px 26px;
 
-  border: 1px solid #eee8ff;
+  border: 2px solid #101b34;
 
-  margin-bottom: 18px;
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #eaf0ff 0%,
+      #f6f8ff 100%
+    );
+
+  box-shadow:
+    5px 5px 0 #101b34;
 }
+
 
 .challenge-title {
+  margin-bottom: 11px;
+
   display: flex;
-  gap: 9px;
   align-items: center;
 
-  font-size: 17px;
-  font-weight: 700;
+  gap: 8px;
 
-  color: #1b1932;
+  color: #1967ff;
 
-  margin-bottom: 10px;
+  font-family: "Manrope", sans-serif;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  letter-spacing: 0.2px;
 }
 
-.challenge-box p {
+
+.challenge-box > p {
   margin: 0;
 
-  color: #686b7b;
+  color: #101b34;
 
-  font-size: 16px;
+  font-size: 17px;
+  font-weight: 650;
 
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
+
+/* =========================================================
+   CHALLENGE ACTIONS
+========================================================= */
+
+.challenge-actions {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 18px;
+
+  flex-wrap: wrap;
+}
+
+
+.repeat-challenge-button,
+.next-challenge-button {
+  min-height: 42px;
+
+  padding: 0 15px;
+
+  border-radius: 11px;
+
+  font-size: 11px;
+  font-weight: 750;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.repeat-challenge-button {
+  border: 2px solid #101b34;
+
+  background: #fffaf1;
+
+  color: #101b34;
+
+  box-shadow:
+    3px 3px 0 #101b34;
+}
+
+
+.repeat-challenge-button:hover:not(:disabled) {
+  transform: translate(1px, 1px);
+
+  box-shadow:
+    2px 2px 0 #101b34;
+}
+
+
+.next-challenge-button {
+  border: 2px solid #101b34;
+
+  background: #ff844b;
+
+  color: #101b34;
+
+  box-shadow:
+    3px 3px 0 #101b34;
+}
+
+
+.next-challenge-button:hover:not(:disabled) {
+  transform: translate(1px, 1px);
+
+  box-shadow:
+    2px 2px 0 #101b34;
+}
+
+
+.repeat-challenge-button:disabled,
+.next-challenge-button:disabled {
+  opacity: 0.55;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   MAIN SPEAK BUTTON
+========================================================= */
+
 .speak-button {
+  position: relative;
+
   width: 100%;
 
-  border: none;
+  min-height: 58px;
 
-  padding: 16px;
+  padding: 16px 20px;
 
-  border-radius: 16px;
+  border: 2px solid #101b34;
 
-  background: linear-gradient(
-    135deg,
-    #6844ff,
-    #825cff
-  );
+  border-radius: 15px;
+
+  background: #1967ff;
 
   color: white;
 
-  font-size: 17px;
-  font-weight: 700;
+  font-size: 15px;
+  font-weight: 800;
 
   cursor: pointer;
 
   box-shadow:
-    0 10px 24px rgba(104, 68, 255, 0.22);
+    5px 5px 0 #101b34;
 
-  transition: 0.22s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-.speak-button:hover {
-  transform: translateY(-2px);
+
+.speak-button:hover:not(:disabled) {
+  transform: translate(2px, 2px);
 
   box-shadow:
-    0 14px 30px rgba(104, 68, 255, 0.28);
+    3px 3px 0 #101b34;
 }
+
 
 .speak-button:disabled {
-  opacity: 0.65;
+  opacity: 0.7;
 
   cursor: not-allowed;
-
-  transform: none;
 }
+
+
+/* =========================================================
+   NEXA STATUS
+========================================================= */
 
 .listening-text {
-  margin-top: 10px;
+  width: fit-content;
 
-  text-align: center;
+  margin: 14px auto 0;
 
-  color: #6f4cff;
+  padding: 7px 12px;
 
-  font-size: 14px;
-  font-weight: 600;
+  border-radius: 999px;
+
+  background: #e8efff;
+
+  color: #1967ff;
+
+  font-size: 11px;
+  font-weight: 800;
 }
+
+
+/* =========================================================
+   ANSWER BOX
+========================================================= */
 
 .answer-box {
+  position: relative;
+
   margin-top: 20px;
 
-  padding: 19px;
+  padding: 21px 22px;
 
-  border-radius: 18px;
+  border: 1.5px solid rgba(16, 27, 52, 0.18);
 
-  background: #fcfcfd;
+  border-radius: 17px;
 
-  border: 1px solid #ececf1;
+  background: #fffdf8;
 }
+
+
+.answer-box::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 15px;
+  bottom: 15px;
+
+  width: 4px;
+
+  border-radius: 0 10px 10px 0;
+
+  background: #ff844b;
+}
+
 
 .answer-title {
-  font-size: 16px;
-  font-weight: 700;
+  margin-bottom: 8px;
 
-  color: #1c1a32;
+  color: #101b34;
 
-  margin-bottom: 9px;
+  font-family: "Manrope", sans-serif;
+
+  font-size: 13px;
+  font-weight: 800;
 }
+
 
 .answer-box p {
   margin: 0;
 
-  color: #676978;
+  color: #626b7d;
 
-  line-height: 1.65;
+  font-size: 14px;
 
-  font-size: 15px;
+  line-height: 1.7;
 }
+
+
+/* =========================================================
+   ANSWER ACTIONS
+========================================================= */
 
 .practice-actions {
   display: flex;
+
   gap: 12px;
 
-  margin-top: 14px;
+  margin-top: 15px;
 }
+
 
 .retry-button,
 .feedback-button {
   flex: 1;
 
-  padding: 14px;
+  min-height: 50px;
 
-  border-radius: 14px;
+  padding: 13px 16px;
 
-  font-size: 15px;
-  font-weight: 700;
+  border-radius: 13px;
+
+  font-size: 12px;
+  font-weight: 800;
 
   cursor: pointer;
 
-  transition: 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
+
 
 .retry-button {
-  background: white;
+  border: 2px solid #101b34;
 
-  color: #6f4cff;
+  background: #fffaf1;
 
-  border: 1.5px solid #7b5cff;
+  color: #101b34;
+
+  box-shadow:
+    3px 3px 0 #101b34;
 }
+
 
 .retry-button:hover {
-  background: #f8f6ff;
+  transform: translate(1px, 1px);
+
+  box-shadow:
+    2px 2px 0 #101b34;
 }
+
 
 .feedback-button {
-  border: none;
+  border: 2px solid #101b34;
 
-  background: #17152e;
+  background: #101b34;
 
   color: white;
+
+  box-shadow:
+    3px 3px 0 #ff844b;
 }
 
+
 .feedback-button:hover {
-  transform: translateY(-1px);
+  transform: translate(1px, 1px);
+
+  box-shadow:
+    2px 2px 0 #ff844b;
 }
+
+
+/* =========================================================
+   CHANGE TOPIC
+========================================================= */
 
 .change-topic {
   width: 100%;
 
-  margin-top: 15px;
+  margin-top: 21px;
+
+  padding: 10px;
 
   border: none;
 
   background: transparent;
 
-  color: #777385;
+  color: #747b8a;
 
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: 700;
 
   cursor: pointer;
+
+  transition: color 0.2s ease;
 }
+
 
 .change-topic:hover {
-  color: #6f4cff;
+  color: #1967ff;
 }
 
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .practice-wrapper {
+    max-width: 760px;
+  }
+
+  .practice-card {
+    padding:
+      54px 42px
+      38px;
+  }
+
+  .practice-top h1 {
+    font-size: 34px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
 @media (max-width: 700px) {
+
   .practice-page {
-    padding-top: 30px;
+    padding:
+      25px 14px
+      45px;
   }
 
   .practice-wrapper {
-    padding-top: 145px;
+    padding-top: 155px;
   }
 
   .practice-nexa-area {
     height: 190px;
   }
 
+  .practice-nexa-area::before {
+    top: 19px;
+
+    width: 170px;
+    height: 170px;
+  }
+
+  .practice-nexa-area::after {
+    width: 220px;
+    height: 145px;
+  }
+
   .practice-nexa {
-    width: 210px;
+    width: 205px;
+    height: 185px;
   }
 
   .practice-card {
-    padding: 44px 22px 32px;
+    padding:
+      42px 20px
+      30px;
 
-    border-radius: 24px;
+    border-radius: 22px;
+
+    box-shadow:
+      5px 5px 0 #101b34;
+  }
+
+  .practice-card::before {
+    top: 18px;
+    right: 22px;
   }
 
   .practice-top h1 {
     font-size: 29px;
+
+    letter-spacing: -1px;
+  }
+
+  .practice-top p {
+    font-size: 13px;
+
+    line-height: 1.6;
+  }
+
+  .practice-meta {
+    margin:
+      18px 0 22px;
+  }
+
+  .practice-pill {
+    font-size: 10px;
+  }
+
+  .challenge-box {
+    padding: 20px 18px;
+
+    border-radius: 17px;
+  }
+
+  .challenge-box > p {
+    font-size: 15px;
+  }
+
+  .challenge-actions {
+    flex-direction: column;
+  }
+
+  .repeat-challenge-button,
+  .next-challenge-button {
+    width: 100%;
   }
 
   .practice-actions {
     flex-direction: column;
+  }
+
+  .retry-button,
+  .feedback-button {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL
+========================================================= */
+
+@media (max-width: 390px) {
+
+  .practice-page {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .practice-wrapper {
+    padding-top: 145px;
+  }
+
+  .practice-nexa {
+    width: 190px;
+  }
+
+  .practice-nexa-area::before {
+    width: 160px;
+    height: 160px;
+  }
+
+  .practice-card {
+    padding:
+      40px 17px
+      27px;
+  }
+
+  .practice-top h1 {
+    font-size: 26px;
+  }
+
+  .challenge-box > p {
+    font-size: 14px;
+  }
+
+  .speak-button {
+    font-size: 14px;
   }
 }

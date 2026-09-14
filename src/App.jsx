@@ -1,4 +1,4 @@
-import "./App.css";
+        import "./App.css";
 import nexa from "./assets/nexa.png";
 
 import {
@@ -32,6 +32,11 @@ function Home() {
 
   return (
     <div className="app">
+
+      {/* Decorative background */}
+      <div className="page-grid" />
+
+      {/* NAVBAR */}
       <nav className="navbar">
         <div
           className="logo"
@@ -42,7 +47,14 @@ function Home() {
             })
           }
         >
-          SpeakMate AI
+          <div className="logo-mark">
+            S
+          </div>
+
+          <div className="logo-copy">
+            <strong>SpeakMate</strong>
+            <span>AI</span>
+          </div>
         </div>
 
         <div className="nav-links">
@@ -73,7 +85,7 @@ function Home() {
               scrollToSection("about-nexa")
             }
           >
-            About Nexa
+            Meet Nexa
           </button>
 
           <button
@@ -82,31 +94,34 @@ function Home() {
               navigate("/login")
             }
           >
-            Login
+            Log in
           </button>
         </div>
       </nav>
 
+      {/* HERO */}
       <main className="hero">
+
         <div className="hero-text">
-          <span className="badge">
-            AI-Powered English Speaking Coach
-          </span>
+
+          <div className="lab-label">
+            <span className="lab-dot" />
+            NEXA SPEAK LAB
+          </div>
 
           <h1>
-            Speak English.
+            Don't just learn
             <br />
-
-            <span>
-              Build Confidence.
+            English.
+            <span className="hero-highlight">
+              {" "}Speak it.
             </span>
           </h1>
 
           <p>
-            Practice real conversations, get
-            instant AI feedback and improve your
-            fluency with Nexa — your personal
-            speaking companion.
+            Your judgment-free space to practice
+            real English conversations, make
+            mistakes and get better with Nexa.
           </p>
 
           <div className="hero-buttons">
@@ -116,7 +131,8 @@ function Home() {
                 navigate("/signup")
               }
             >
-              Start Speaking
+              Start a conversation
+              <span>→</span>
             </button>
 
             <button
@@ -125,30 +141,73 @@ function Home() {
                 scrollToSection("about-nexa")
               }
             >
-              Meet Nexa
+              Meet your coach
             </button>
           </div>
 
-          <div className="stats">
-            <div>
-              <strong>24/7</strong>
-              <span>Practice anytime</span>
+          <div className="hero-proof">
+            <div className="proof-item">
+              <span className="proof-icon">
+                🎙
+              </span>
+              <div>
+                <strong>Speak naturally</strong>
+                <small>
+                  No textbook answers
+                </small>
+              </div>
             </div>
 
-            <div>
-              <strong>AI</strong>
-              <span>Instant feedback</span>
-            </div>
+            <div className="proof-divider" />
 
-            <div>
-              <strong>∞</strong>
-              <span>Speaking topics</span>
+            <div className="proof-item">
+              <span className="proof-icon">
+                ✦
+              </span>
+              <div>
+                <strong>Learn instantly</strong>
+                <small>
+                  Feedback after you speak
+                </small>
+              </div>
             </div>
           </div>
+
         </div>
 
-        <div className="nexa-card">
-          <div className="nexa-placeholder">
+        {/* NEXA LAB VISUAL */}
+        <div className="nexa-lab">
+
+          <div className="lab-orbit orbit-one" />
+          <div className="lab-orbit orbit-two" />
+
+          <div className="floating-note note-one">
+            <span>01</span>
+            Speak freely
+          </div>
+
+          <div className="floating-note note-two">
+            <span>02</span>
+            Get feedback
+          </div>
+
+          <div className="voice-chip">
+            <span className="voice-dot" />
+
+            <div className="voice-bars">
+              <i />
+              <i />
+              <i />
+              <i />
+              <i />
+            </div>
+
+            Listening
+          </div>
+
+          <div className="nexa-stage">
+            <div className="nexa-sun" />
+
             <img
               src={nexa}
               alt="Nexa - SpeakMate AI Coach"
@@ -157,185 +216,260 @@ function Home() {
           </div>
 
           <div className="speech-bubble">
-            <p>Hi! I'm Nexa 👋</p>
+            <span className="bubble-label">
+              NEXA
+            </span>
+
+            <p>
+              Say it your way.
+            </p>
 
             <span>
-              Ready to improve your English?
+              I'll help you make it better.
             </span>
           </div>
+
         </div>
       </main>
 
+      {/* MARQUEE / BRAND STRIP */}
+      <div className="practice-strip">
+        <div>
+          <span>REAL CONVERSATIONS</span>
+          <b>✦</b>
+          <span>INSTANT FEEDBACK</span>
+          <b>✦</b>
+          <span>YOUR OWN PACE</span>
+          <b>✦</b>
+          <span>BUILD CONFIDENCE</span>
+        </div>
+      </div>
+
+      {/* HOW IT WORKS */}
       <section
         className="how-section"
         id="how-it-works"
       >
-        <div className="section-heading">
-          <span className="section-tag">
-            HOW IT WORKS
-          </span>
+        <div className="section-intro">
 
-          <h2>
-            Your English practice,
-            <br />
-            made simple.
-          </h2>
+          <div>
+            <span className="section-index">
+              01 / THE PRACTICE LOOP
+            </span>
+
+            <h2>
+              Less studying.
+              <br />
+              More speaking.
+            </h2>
+          </div>
 
           <p>
-            No complicated lessons. Just speak,
-            learn from your mistakes and keep
-            improving.
+            You don't improve speaking by only
+            reading about English. Speak, understand
+            what went wrong, then try again.
           </p>
+
         </div>
 
-        <div className="steps-grid">
-          <div className="step-card">
-            <div className="step-number">
-              01
-            </div>
+        <div className="practice-journey">
 
-            <div className="step-icon">
-              🎯
-            </div>
-
-            <h3>
-              Choose Your Practice
-            </h3>
-
-            <p>
-              Select your English level and topics
-              you actually enjoy talking about.
-            </p>
-          </div>
-
-          <div className="step-card featured-step">
-            <div className="step-number">
-              02
-            </div>
-
-            <div className="step-icon">
-              🎙️
+          <article className="journey-card choose-card">
+            <div className="journey-top">
+              <span>STEP 01</span>
+              <div className="journey-symbol">
+                #
+              </div>
             </div>
 
             <h3>
-              Speak with Nexa
+              Pick something
+              <br />
+              worth talking about.
             </h3>
 
             <p>
-              Answer real speaking challenges using
-              your voice while Nexa listens.
+              Choose your level and a topic you
+              actually want to discuss.
             </p>
-          </div>
 
-          <div className="step-card">
-            <div className="step-number">
-              03
+            <div className="topic-pills">
+              <span>Movies</span>
+              <span>Funny</span>
+              <span>Coding</span>
+              <span>Knowledge</span>
             </div>
+          </article>
 
-            <div className="step-icon">
-              ✨
+          <article className="journey-card speak-card">
+            <div className="journey-top">
+              <span>STEP 02</span>
+              <div className="journey-symbol">
+                ◉
+              </div>
             </div>
 
             <h3>
-              Get Smarter Feedback
+              Stop thinking.
+              <br />
+              Start speaking.
             </h3>
 
             <p>
-              See grammar, vocabulary, fluency and
-              clarity feedback, then retry and
-              improve.
+              Answer Nexa's challenge using your
+              voice. No perfect answer required.
             </p>
-          </div>
+
+            <div className="mini-wave">
+              <i />
+              <i />
+              <i />
+              <i />
+              <i />
+              <i />
+              <i />
+              <i />
+            </div>
+          </article>
+
+          <article className="journey-card improve-card">
+            <div className="journey-top">
+              <span>STEP 03</span>
+              <div className="journey-symbol">
+                ↗
+              </div>
+            </div>
+
+            <h3>
+              See exactly where
+              <br />
+              you can improve.
+            </h3>
+
+            <p>
+              Get useful feedback on grammar,
+              vocabulary, fluency and clarity.
+            </p>
+
+            <div className="score-preview">
+              <div>
+                <span>Fluency</span>
+                <strong>82</strong>
+              </div>
+
+              <div>
+                <span>Clarity</span>
+                <strong>88</strong>
+              </div>
+            </div>
+          </article>
+
         </div>
       </section>
 
+      {/* NEXA SECTION */}
       <section
         className="about-nexa-section"
         id="about-nexa"
       >
+
         <div className="about-nexa-visual">
-          <div className="about-nexa-glow" />
 
-          <img
-            src={nexa}
-            alt="Meet Nexa"
-            className="about-nexa-image"
-          />
+          <div className="nexa-poster">
 
-          <div className="nexa-online-badge">
-            <span />
-            Nexa is ready
+            <div className="poster-top">
+              <span>
+                YOUR SPEAKING COMPANION
+              </span>
+              <strong>02</strong>
+            </div>
+
+            <div className="poster-circle" />
+
+            <img
+              src={nexa}
+              alt="Meet Nexa"
+              className="about-nexa-image"
+            />
+
+            <div className="poster-caption">
+              <strong>NEXA</strong>
+              <span>
+                AI speaking companion
+              </span>
+            </div>
+
           </div>
+
         </div>
 
         <div className="about-nexa-content">
-          <span className="section-tag">
-            MEET YOUR AI COACH
+
+          <span className="section-index">
+            02 / MEET NEXA
           </span>
 
           <h2>
-            Hi, I'm Nexa.
+            A coach that
             <br />
-            Let's get you talking.
+            lets you mess up.
           </h2>
 
           <p className="about-description">
-            Nexa is your AI speaking companion
-            inside SpeakMate AI. She's here to make
-            English practice feel more like a real
-            conversation and less like studying
-            from a textbook.
+            Nexa isn't here to judge your English.
+            She's here to keep the conversation
+            going, show you what can be improved
+            and help you become more confident
+            every time you speak.
           </p>
 
-          <div className="nexa-features">
+          <div className="nexa-feature-list">
+
             <div className="nexa-feature">
-              <span>🎙️</span>
+              <span>01</span>
 
               <div>
-                <h3>Speaking Challenges</h3>
+                <h3>
+                  Real speaking challenges
+                </h3>
+
                 <p>
-                  Practice English with interesting
-                  questions and topics.
+                  Questions designed to make you
+                  actually talk, not memorize.
                 </p>
               </div>
             </div>
 
             <div className="nexa-feature">
-              <span>🧠</span>
+              <span>02</span>
 
               <div>
-                <h3>AI Feedback</h3>
+                <h3>
+                  Feedback you can use
+                </h3>
+
                 <p>
-                  Understand your mistakes and see
-                  how you can answer better.
+                  Understand mistakes and discover
+                  a clearer way to express yourself.
                 </p>
               </div>
             </div>
 
             <div className="nexa-feature">
-              <span>📈</span>
+              <span>03</span>
 
               <div>
-                <h3>Track Improvement</h3>
+                <h3>
+                  Progress that feels real
+                </h3>
+
                 <p>
-                  Review your practice history,
-                  scores and progress over time.
+                  Look back at your sessions,
+                  scores and improvement.
                 </p>
               </div>
             </div>
 
-            <div className="nexa-feature">
-              <span>💭</span>
-
-              <div>
-                <h3>Maturity Challenge</h3>
-                <p>
-                  Explore difficult situations and
-                  practice expressing thoughtful
-                  answers in English.
-                </p>
-              </div>
-            </div>
           </div>
 
           <button
@@ -344,52 +478,128 @@ function Home() {
               navigate("/signup")
             }
           >
-            Start Practicing with Nexa →
+            Practice with Nexa
+            <span>→</span>
           </button>
+
         </div>
       </section>
 
-      <section className="home-cta">
-        <div>
-          <span className="section-tag">
-            READY TO SPEAK?
+      {/* MATURITY CHALLENGE TEASER */}
+      <section className="maturity-home-section">
+
+        <div className="maturity-copy">
+          <span className="section-index light-index">
+            03 / NOT JUST ENGLISH
           </span>
 
           <h2>
-            Confidence starts with
-            one conversation.
+            How would you
+            <br />
+            handle this?
           </h2>
 
           <p>
-            Start practicing English with Nexa and
-            turn every mistake into progress.
+            SpeakMate AI also challenges how you
+            communicate your thoughts in difficult
+            situations.
           </p>
 
           <button
-            className="primary-btn"
             onClick={() =>
               navigate("/signup")
             }
+            className="maturity-btn"
           >
-            Start Speaking Free
+            Try Maturity Challenge →
           </button>
         </div>
+
+        <div className="scenario-card">
+          <div className="scenario-meta">
+            <span>SITUATION 07</span>
+            <span>THINK • SPEAK • REFLECT</span>
+          </div>
+
+          <p>
+            “Your close friend made a mistake that
+            affected your team. Everyone is blaming
+            them. What would you do?”
+          </p>
+
+          <div className="scenario-footer">
+            <span>
+              There is no perfect answer.
+            </span>
+
+            <div>
+              YOUR TURN
+              <span>→</span>
+            </div>
+          </div>
+        </div>
+
       </section>
 
+      {/* FINAL CTA */}
+      <section className="home-cta">
+
+        <span className="cta-small">
+          YOUR NEXT CONVERSATION
+        </span>
+
+        <h2>
+          You already know
+          <br />
+          more English than
+          <br />
+          you speak.
+        </h2>
+
+        <p>
+          Let's change that.
+        </p>
+
+        <button
+          className="primary-btn"
+          onClick={() =>
+            navigate("/signup")
+          }
+        >
+          Start speaking free
+          <span>→</span>
+        </button>
+
+      </section>
+
+      {/* FOOTER */}
       <footer className="home-footer">
-        <div className="footer-logo">
-          SpeakMate AI
+
+        <div className="footer-brand">
+          <div className="logo-mark">
+            S
+          </div>
+
+          <div>
+            <strong>SpeakMate AI</strong>
+            <span>
+              Practice. Speak. Improve.
+            </span>
+          </div>
         </div>
 
         <p>
-          Practice. Speak. Improve.
+          Built around one simple idea:
+          <br />
+          confidence comes from practice.
         </p>
 
-        <span>
-          Built with AI to make English practice
-          easier.
+        <span className="footer-year">
+          © 2026 SpeakMate AI
         </span>
+
       </footer>
+
     </div>
   );
 }

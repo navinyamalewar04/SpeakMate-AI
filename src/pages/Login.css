@@ -1,164 +1,410 @@
+/* =========================================================
+   SPEAKMATE AI — LOGIN
+   NEXA SPEAK LAB THEME
+========================================================= */
+
 .login-page {
   min-height: 100vh;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+
+  padding: 28px;
+
   box-sizing: border-box;
 
   background:
-    radial-gradient(circle at 20% 20%, #eee9ff 0%, transparent 35%),
-    radial-gradient(circle at 80% 80%, #e9f0ff 0%, transparent 35%),
-    #f8f9ff;
+    radial-gradient(
+      circle at 14% 16%,
+      rgba(255, 132, 75, 0.1),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 86% 80%,
+      rgba(25, 103, 255, 0.1),
+      transparent 30%
+    ),
+    #f7f2e8;
+
+  font-family: "DM Sans", "Inter", sans-serif;
+
+  color: #101b34;
 }
+
+
+/* =========================================================
+   CARD
+========================================================= */
 
 .login-card {
+  position: relative;
+
   width: 100%;
-  max-width: 420px;
-  background: white;
-  padding: 40px;
-  border-radius: 24px;
-  box-shadow: 0 20px 60px rgba(80, 60, 180, 0.12);
+  max-width: 430px;
+
   box-sizing: border-box;
+
+  padding: 42px 38px;
+
+  border: 2px solid #101b34;
+  border-radius: 26px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #fffaf1,
+      #fffdf8
+    );
+
+  box-shadow:
+    8px 8px 0 #101b34;
 }
+
+
+/* decorative dots */
+
+.login-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 20px;
+  right: 23px;
+
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  background: #ff844b;
+
+  box-shadow:
+    19px 0 0 #1967ff,
+    38px 0 0 #101b34;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
 
 .login-card h1 {
-  margin-top: 0;
-  margin-bottom: 8px;
-  font-size: 32px;
-  color: #171717;
+  margin: 0 0 9px;
+
+  color: #101b34;
+
+  font-family: "Manrope", "Inter", sans-serif;
+
+  font-size: 34px;
+  font-weight: 900;
+
+  letter-spacing: -1.2px;
+
+  line-height: 1.1;
 }
 
+
 .login-card > p {
-  margin-bottom: 28px;
-  color: #777;
+  margin: 0 0 29px;
+
+  color: #697184;
+
+  font-size: 14px;
+
+  line-height: 1.65;
 }
+
+
+/* =========================================================
+   INPUTS
+========================================================= */
 
 .login-card input {
   width: 100%;
+
   box-sizing: border-box;
-  padding: 14px 16px;
-  margin-bottom: 16px;
-  border: 1px solid #ddd;
+
+  min-height: 52px;
+
+  padding: 13px 15px;
+
+  margin-bottom: 15px;
+
+  border: 2px solid #101b34;
   border-radius: 12px;
-  font-size: 15px;
+
+  background: #fffdf8;
+
+  color: #101b34;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
   outline: none;
-  transition: 0.2s;
+
+  transition:
+    background 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
 }
+
+
+.login-card input::placeholder {
+  color: #9ba0aa;
+}
+
 
 .login-card input:focus {
-  border-color: #6d4aff;
-  box-shadow: 0 0 0 3px rgba(109, 74, 255, 0.08);
+  background: white;
+
+  box-shadow:
+    4px 4px 0 #1967ff;
+
+  transform: translateY(-1px);
 }
 
-.login-card button {
-  width: 100%;
-  padding: 14px;
-  border: none;
-  border-radius: 12px;
-  background: #6d4aff;
-  color: white;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.2s;
-}
 
-.login-card button:hover {
-  opacity: 0.9;
-}
+.login-card input:disabled {
+  opacity: 0.65;
 
-.login-card button:disabled {
-  opacity: 0.6;
   cursor: not-allowed;
 }
 
-/* OR Divider */
+
+/* =========================================================
+   MAIN LOGIN BUTTON
+========================================================= */
+
+.login-card > button:not(.google-login-btn) {
+  width: 100%;
+
+  min-height: 52px;
+
+  padding: 13px 17px;
+
+  border: 2px solid #101b34;
+  border-radius: 12px;
+
+  background: #1967ff;
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    4px 4px 0 #101b34;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.login-card > button:not(.google-login-btn):hover:not(:disabled) {
+  transform: translate(2px, 2px);
+
+  box-shadow:
+    2px 2px 0 #101b34;
+}
+
+
+.login-card button:disabled {
+  opacity: 0.55;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   OR DIVIDER
+========================================================= */
 
 .auth-divider {
   display: flex;
+
   align-items: center;
+
   gap: 12px;
-  margin: 22px 0;
-  color: #999;
-  font-size: 13px;
+
+  margin: 24px 0;
+
+  color: #8a909b;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1px;
 }
+
 
 .auth-divider::before,
 .auth-divider::after {
   content: "";
+
   flex: 1;
+
   height: 1px;
-  background: #e5e5e5;
+
+  background:
+    rgba(16, 27, 52, 0.17);
 }
 
-/* Google Sign In Button */
+
+/* =========================================================
+   GOOGLE BUTTON
+========================================================= */
 
 .login-card .google-login-btn {
   width: 100%;
+
+  min-height: 52px;
+
   padding: 13px 16px;
+
   display: flex;
+
   align-items: center;
   justify-content: center;
+
   gap: 10px;
 
-  background: white;
-  color: #333;
-
-  border: 1px solid #ddd;
+  border: 2px solid #101b34;
   border-radius: 12px;
 
-  font-size: 15px;
-  font-weight: 600;
+  background: #fffaf1;
+
+  color: #101b34;
+
+  font-size: 14px;
+  font-weight: 800;
 
   cursor: pointer;
-  transition: 0.2s;
+
+  box-shadow:
+    3px 3px 0 #101b34;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
 }
 
-.login-card .google-login-btn:hover {
-  opacity: 1;
-  background: #f8f8f8;
-  border-color: #c8c8c8;
-  transform: translateY(-1px);
+
+.login-card .google-login-btn:hover:not(:disabled) {
+  background: #eef4ff;
+
+  transform: translate(1px, 1px);
+
+  box-shadow:
+    2px 2px 0 #101b34;
 }
+
 
 .google-icon {
   width: 20px;
   height: 20px;
+
   object-fit: contain;
 }
 
-/* Signup text */
+
+/* =========================================================
+   SIGNUP SWITCH
+========================================================= */
 
 .auth-switch {
-  text-align: center;
-  margin-top: 20px;
+  margin-top: 22px !important;
   margin-bottom: 0 !important;
-  font-size: 14px;
-  color: #777;
+
+  text-align: center;
+
+  color: #697184 !important;
+
+  font-size: 13px !important;
 }
 
+
 .auth-switch span {
-  color: #6d4aff;
-  font-weight: 600;
+  color: #1967ff;
+
+  font-weight: 800;
+
   cursor: pointer;
 }
+
 
 .auth-switch span:hover {
   text-decoration: underline;
 }
 
-/* Mobile */
+
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 500px) {
+
   .login-page {
-    padding: 16px;
+    padding: 18px;
   }
 
+
   .login-card {
-    padding: 30px 22px;
-    border-radius: 20px;
+    padding: 34px 23px;
+
+    border-radius: 22px;
+
+    box-shadow:
+      5px 5px 0 #101b34;
   }
+
+
+  .login-card::before {
+    top: 16px;
+    right: 18px;
+  }
+
+
+  .login-card h1 {
+    font-size: 29px;
+  }
+
+
+  .login-card > p {
+    font-size: 13px;
+
+    margin-bottom: 24px;
+  }
+
+
+  .login-card input,
+  .login-card > button:not(.google-login-btn),
+  .login-card .google-login-btn {
+    min-height: 50px;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL
+========================================================= */
+
+@media (max-width: 370px) {
+
+  .login-page {
+    padding: 13px;
+  }
+
+
+  .login-card {
+    padding: 31px 18px;
+  }
+
 
   .login-card h1 {
     font-size: 27px;
